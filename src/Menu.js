@@ -5,10 +5,22 @@ import Simples from './componentes/Simples'
 import ParImpar from './componentes/ParImpar'
 import { Inverter, MegaSena } from './componentes/multi'
 import Contador from './componentes/Contador'
+import Plataformas from './componentes/Plataformas'
+import ValidarProps from './componentes/ValidarProps'
+import Evento from './componentes/Evento'
 
 export default createDrawerNavigator({
+    Evento: {
+        screen: Evento
+    },
+    ValidarProps: {
+        screen: () => <ValidarProps ano={20} />
+    },
+    Plataformas: {
+        screen: Plataformas
+    },
     Contador: {
-        screen: () => <Contador numeroInicial = {100}/>
+        screen: () => <Contador numeroInicial={100} />
     },
     MegaSena: {
         screen: () => <MegaSena numeros={8} />,
